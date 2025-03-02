@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypingMaster Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">TypingMaster</div>
+        <ul class="nav-links">
+            <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
+            <li><a href="#" class="nav-link" data-section="typing-test">Test</a></li>
+            <li><a href="#" class="nav-link" data-section="leaderboard">Leaderboard</a></li>
+            <li><a href="#" class="nav-link" data-section="settings">Settings</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1>Boost Your Typing Speed</h1>
+                <button class="cta-btn" id="startTest">Start Test</button>
+            </div>
+        </section>
+
+        <!-- Typing Test Section -->
+        <section id="typing-test" class="section">
+            <div class="test-container">
+                <div class="test-header">
+                    <div class="stats">
+                        <span>Time: <span id="timer">60</span>s</span>
+                        <span>WPM: <span id="wpm">0</span></span>
+                        <span>Accuracy: <span id="accuracy">0</span>%</span>
+                    </div>
+                </div>
+                <div id="sample-text" class="sample-text"></div>
+                <textarea id="typing-input" placeholder="Start typing here..." disabled></textarea>
+                <div id="virtual-keyboard" class="virtual-keyboard"></div>
+            </div>
+        </section>
+
+        <!-- Leaderboard Section -->
+        <section id="leaderboard" class="section">
+            <h2>Leaderboard</h2>
+            <table id="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>WPM</th>
+                        <th>Accuracy</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="section">
+            <h2>Settings</h2>
+            <div class="settings-grid">
+                <div class="setting">
+                    <label>Difficulty:</label>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="setting">
+                    <label>Duration:</label>
+                    <select id="duration">
+                        <option value="30">30s</option>
+                        <option value="60">60s</option>
+                        <option value="120">120s</option>
+                    </select>
+                </div>
+                <div class="setting">
+                    <label>Dark Mode:</label>
+                    <label class="switch">
+                        <input type="checkbox" id="dark-mode">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
